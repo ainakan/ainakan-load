@@ -1,20 +1,20 @@
-`frida-load` has been deprecated. You should use [frida-compile](https://github.com/frida/frida-compile).
+`ainakan-load` has been deprecated. You should use [ainakan-compile](https://github.com/ainakan/ainakan-compile).
 
 -----
 
-# frida-load
+# ainakan-load
 
-Load a Frida script comprised of one or more Node.js modules.
+Load a Ainakan script comprised of one or more Node.js modules.
 
 ## Example
 
 ```js
-var frida = require('frida');
-var load = require('frida-load');
+var ainakan = require('ainakan');
+var load = require('ainakan-load');
 
 load(require.resolve('./agent.js'))
 .then(function (source) {
-  frida.attach('Skype')
+  ainakan.attach('Skype')
   .then(function (session) {
     session.createScript(source)
     .then(...) // and so on
@@ -25,5 +25,5 @@ load(require.resolve('./agent.js'))
 ## Installation
 
 ```bash
-$ npm install frida-load
+$ npm install ainakan-load
 ```
